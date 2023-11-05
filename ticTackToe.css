@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    margin: 100px auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 22vh);
+    width: 50vw;
+
+
+}
+
+.div {
+    font-size: 8rem;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+
+}
+
+
+
+#topL {
+    border-right: 3px solid #000;
+    border-bottom: 3px solid #000;
+}
+
+#topM {
+    border-left: 3px solid #000;
+    border-bottom: 3px solid #000;
+    border-right: 3px solid #000;
+}
+
+#topR {
+    border-left: 3px solid #000;
+    border-bottom: 3px solid #000;
+}
+
+#middleL {
+    border-right: 3px solid #000;
+    border-top: 3px solid #000;
+    border-bottom: 3px solid #000;
+}
+
+#middleM {
+    border: 3px solid #000;
+}
+
+#middleR {
+    border-top: 3px solid #000;
+    border-left: 3px solid #000;
+    border-bottom: 3px solid #000;
+}
+
+#bottomL {
+    border-top: 3px solid #000;
+    border-right: 3px solid #000;
+}
+
+#bottomM {
+    border-right: 3px solid #000;
+    border-top: 3px solid #000;
+    border-left: 3px solid #000;
+}
+
+#bottomR {
+    border-top: 3px solid #000;
+    border-left: 3px solid #000;
+}
+
+#Defeat,
+#draw,
+#Victory {
+    width: 100vw;
+    height: 30vh;
+    background-color: rgba(218, 218, 132, 0.7);
+    position: absolute;
+    top: 25vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+#Defeat-content,
+#draw-content,
+#Victory-content {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+h3 {
+    font-size: 6rem;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.button-container {
+    margin: 0 auto;
+}
+
+#Restart1,
+#Restart2,
+#Restart3 {
+    width: 10vw;
+    font-size: 1.2rem;
+    border: none;
+}
+
+.Restart:hover {
+    color: white;
+    background-color: grey;
+}
+
+@media (max-width:800px) {
+    .container {
+        width: 95vw;
+        margin: 100px auto;
+    }
+
+
+    #Restart1,
+    #Restart2,
+    #Restart3 {
+        width: 40vw;
+    }
+}
+
+@media (max-width:600px) {
+
+    h3 {
+        font-size: 3rem;
+    }
+
+    #Defeat,
+    #draw,
+    #Victory {
+        height: 15vh;
+        top: 35vh;
+    }
+}
