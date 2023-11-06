@@ -4,25 +4,45 @@
     box-sizing: border-box;
 }
 
+body {
+    background-image: url(playground3.jpg);
+    background-blend-mode: darken;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
 .container {
     margin: 100px auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 22vh);
     width: 50vw;
-
-
+    border: 5px solid rgb(84, 150, 150)
 }
 
 .div {
-    font-size: 8rem;
+    font-size: 7.7rem;
     text-align: center;
     height: 100%;
     width: 100%;
+    font-family: 'Permanent Marker';
+
 
 }
 
-
+#topL,
+#topM,
+#topR,
+#middleL,
+#middleM,
+#middleR,
+#bottomL,
+#bottomM,
+#bottomR {
+    background-color: rgba(218, 218, 218, 0.589);
+}
 
 #topL {
     border-right: 3px solid #000;
@@ -77,13 +97,24 @@
 #Victory {
     width: 100vw;
     height: 30vh;
-    background-color: rgba(218, 218, 132, 0.7);
     position: absolute;
-    top: 25vh;
+    top: 30vh;
     display: flex;
     justify-content: center;
     align-items: center;
     display: none;
+}
+
+#draw {
+    background-color: rgba(253, 253, 180, 0.7);
+}
+
+#Defeat {
+    background-color: rgba(253, 166, 144, 0.7);
+}
+
+#Victory {
+    background-color: rgba(155, 215, 255, 0.7);
 }
 
 #Defeat-content,
@@ -95,9 +126,22 @@
 }
 
 h3 {
-    font-size: 6rem;
+    font-size: 7rem;
     padding-bottom: 20px;
     text-align: center;
+    font-family: 'Caveat';
+}
+
+.Def {
+    color: red;
+}
+
+.Vic {
+    color: blue;
+}
+
+.draw {
+    color: rgb(255, 255, 4);
 }
 
 .button-container {
@@ -107,15 +151,44 @@ h3 {
 #Restart1,
 #Restart2,
 #Restart3 {
-    width: 10vw;
+
     font-size: 1.2rem;
     border: none;
+    padding: 8px;
+    border-radius: 10px;
 }
 
-.Restart:hover {
-    color: white;
-    background-color: grey;
+#Restart1 {
+    color: black;
+    background-color: lightcoral;
+    border: 1px solid black;
 }
+
+#Restart1:hover {
+    background-color: red;
+}
+
+#Restart2 {
+    color: black;
+    background-color: lightgoldenrodyellow;
+    border: 1px solid black;
+}
+
+#Restart2:hover {
+    background-color: yellow;
+}
+
+#Restart3 {
+    color: black;
+    background-color: lightblue;
+    border: 1px solid black;
+}
+
+#Restart3:hover {
+    background-color: rgb(78, 78, 245);
+}
+
+
 
 @media (max-width:800px) {
     .container {

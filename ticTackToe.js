@@ -69,8 +69,9 @@ document.addEventListener("click", function (e) {
                 const pTag = loopelement.querySelector('p');
 
                 if (!pTag) {
-                    winner();
+                    /*   winner(); */
                     Competition();
+                    winner();
                     return;
                 } else {
 
