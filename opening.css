@@ -1,0 +1,64 @@
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        background-image: url(playground3.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .container {
+        margin: 0 auto;
+        height: 100vh;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    h1 {
+        font-family: 'Caveat';
+        font-size: 10rem;
+    }
+
+    .red {
+        color: red;
+    }
+
+    .blue {
+        color: blue;
+    }
+
+    .yellow {
+        color: yellow;
+    }
+
+    a {
+        text-decoration: none;
+        font-size: 3rem;
+        color: black;
+    }
+
+    a:hover {
+        color: darkblue;
+    }
+
+    @media (max-width:800px) {
+        h1 {
+            font-size: 7rem;
+        }
+
+        a {
+            font-size: 2rem;
+        }
+    }
+
+    @media (max-width:520px) {
+        h1 {
+            font-size: 4.8rem;
+        }
+    }

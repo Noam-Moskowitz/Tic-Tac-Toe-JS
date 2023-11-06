@@ -6,7 +6,6 @@
 
 body {
     background-image: url(playground3.jpg);
-    background-blend-mode: darken;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -200,7 +199,7 @@ h3 {
     #Restart1,
     #Restart2,
     #Restart3 {
-        width: 40vw;
+        font-size: 1rem;
     }
 }
 
