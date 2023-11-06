@@ -64,7 +64,7 @@ document.addEventListener("click", function (e) {
                 let loopelementID = board[x].id;
                 let loopelement = document.getElementById(loopelementID);
                 const pTag = loopelement.querySelector('p');
-
+                winner();
                 if (!pTag) {
                     /*   winner(); */
                     Competition();
