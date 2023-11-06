@@ -57,14 +57,14 @@ document.addEventListener("click", function (e) {
         if (elementID == boardCheck) {
             element.style.backgroundColor = "lightblue";
             element.innerHTML = "<p style = 'color:blue;'>X</p>";
-
+            winner();
             a++;
            
             for (x = 0; x < board.length; x++) {
                 let loopelementID = board[x].id;
                 let loopelement = document.getElementById(loopelementID);
                 const pTag = loopelement.querySelector('p');
-                winner();
+                
                 if (!pTag) {
                     /*   winner(); */
                     Competition();
