@@ -44,18 +44,24 @@ const CV22 = [bottomR, bottomL]
 const CV23 = [topL, bottomR]
 const CV24 = [topR, bottomL]
 
-
+const Draw = [topL, topM, topR, middleL, middleM, middleR, bottomL, bottomM, bottomR]
+let a = 0;
 
 document.addEventListener("click", function (e) {
     let elementID = e.target.id;
     let element = document.getElementById(elementID);
+
     for (x = 0; x < board.length; x++) {
         let boardCheck = board[x].id;
 
         if (elementID == boardCheck) {
             element.style.backgroundColor = "lightblue";
             element.innerHTML = "<p style = 'color:blue;'>X</p>";
-            let boardFilled = false;
+
+            a++;
+            if (a >= 5) {
+                document.getElementById('draw').style.display = 'block';
+            }
 
             for (x = 0; x < board.length; x++) {
                 let loopelementID = board[x].id;
@@ -67,11 +73,7 @@ document.addEventListener("click", function (e) {
                     Competition();
                     return;
                 } else {
-                    boardFilled = true;
-                }
 
-                if (boardFilled = true) {
-                    /* document.getElementById('draw').style.display = 'block'; */
                 }
             }
         }
@@ -92,6 +94,7 @@ function winner() {
         if (V1[0].textContent == "X" && V1[1].textContent == "X" && V1[2].textContent == "X") {
             document.getElementById('Victory').style.display = 'block';
             return;
+
         } else if (V1[0].textContent == "O" && V1[1].textContent == "O" && V1[2].textContent == "O") {
             document.getElementById('Defeat').style.display = 'block';
             return;
@@ -165,319 +168,319 @@ function winner() {
 function Competition() {
     for (x = 0; x < CV1.length; x++) {
         if (CV1[0].textContent == "X" && CV1[1].textContent == "X") {
-                const pTag = topR.querySelector('p');
+            const pTag = topR.querySelector('p');
 
-                if (pTag) {
-                } else {
-                    winner();
-                    topR.style.backgroundColor = "#f8b0b0";
-                    topR.innerHTML = "<p style = 'color:red;'>O</p>"
-                    return;
+            if (pTag) {
+            } else {
+                winner();
+                topR.style.backgroundColor = "#f8b0b0";
+                topR.innerHTML = "<p style = 'color:red;'>O</p>"
+                return;
 
-                }
-            
+            }
+
         }
     }
     for (x = 0; x < CV2.length; x++) {
         if (CV2[0].textContent == "X" && CV2[1].textContent == "X") {
-                const pTag = topL.querySelector('p');
+            const pTag = topL.querySelector('p');
 
-                if (pTag) {
-                } else {
-                    winner();
-                    topL.style.backgroundColor = "#f8b0b0";
-                    topL.innerHTML = "<p style = 'color:red;'>O</p>"
-                    return;
-                }
-            
+            if (pTag) {
+            } else {
+                winner();
+                topL.style.backgroundColor = "#f8b0b0";
+                topL.innerHTML = "<p style = 'color:red;'>O</p>"
+                return;
+            }
+
         }
     }
     for (x = 0; x < CV3.length; x++) {
         if (CV3[0].textContent == "X" && CV3[1].textContent == "X") {
-                const pTag = middleL.querySelector('p');
+            const pTag = middleL.querySelector('p');
 
-                if (pTag) {
-                } else {
-                    winner();
-                    middleL.style.backgroundColor = "#f8b0b0";
-                    middleL.innerHTML = "<p style = 'color:red;'>O</p>"
-                    return;
-                }
-            
+            if (pTag) {
+            } else {
+                winner();
+                middleL.style.backgroundColor = "#f8b0b0";
+                middleL.innerHTML = "<p style = 'color:red;'>O</p>"
+                return;
+            }
+
         }
     }
     for (x = 0; x < CV4.length; x++) {
         if (CV4[0].textContent == "X" && CV4[1].textContent == "X") {
-                const pTag = middleR.querySelector('p');
+            const pTag = middleR.querySelector('p');
 
-                if (pTag) {
-                } else {
-                    winner();
-                    middleR.style.backgroundColor = "#f8b0b0";
-                    middleR.innerHTML = "<p style = 'color:red;'>O</p>"
-                    return;
-                }
-            
+            if (pTag) {
+            } else {
+                winner();
+                middleR.style.backgroundColor = "#f8b0b0";
+                middleR.innerHTML = "<p style = 'color:red;'>O</p>"
+                return;
+            }
+
         }
     }
     for (x = 0; x < CV5.length; x++) {
         if (CV5[0].textContent == "X" && CV5[1].textContent == "X") {
-                const pTag = bottomL.querySelector('p');
+            const pTag = bottomL.querySelector('p');
 
-                if (pTag) {
-                } else {
-                    winner();
-                    bottomL.style.backgroundColor = "#f8b0b0";
-                    bottomL.innerHTML = "<p style = 'color:red;'>O</p>"
-                    return;
-                }
+            if (pTag) {
+            } else {
+                winner();
+                bottomL.style.backgroundColor = "#f8b0b0";
+                bottomL.innerHTML = "<p style = 'color:red;'>O</p>"
+                return;
+            }
         }
     }
     for (x = 0; x < CV6.length; x++) {
         if (CV6[0].textContent == "X" && CV6[1].textContent == "X") {
-                const pTag = bottomR.querySelector('p');
+            const pTag = bottomR.querySelector('p');
 
-                if (pTag) {
-                } else {
-                    winner();
-                    bottomR.style.backgroundColor = "#f8b0b0";
-                    bottomR.innerHTML = "<p style = 'color:red;'>O</p>"
-                    return;
-                }
+            if (pTag) {
+            } else {
+                winner();
+                bottomR.style.backgroundColor = "#f8b0b0";
+                bottomR.innerHTML = "<p style = 'color:red;'>O</p>"
+                return;
+            }
         }
     }
     for (x = 0; x < CV7.length; x++) {
         if (CV7[0].textContent == "X" && CV7[1].textContent == "X") {
-                const pTag = bottomL.querySelector('p');
+            const pTag = bottomL.querySelector('p');
 
-                if (pTag) {
-                } else {
-                    winner();
-                    bottomL.style.backgroundColor = "#f8b0b0";
-                    bottomL.innerHTML = "<p style = 'color:red;'>O</p>"
-                    return;
-                }
+            if (pTag) {
+            } else {
+                winner();
+                bottomL.style.backgroundColor = "#f8b0b0";
+                bottomL.innerHTML = "<p style = 'color:red;'>O</p>"
+                return;
+            }
         }
     }
     for (x = 0; x < CV8.length; x++) {
         if (CV8[0].textContent == "X" && CV8[1].textContent == "X") {
-                const pTag = topL.querySelector('p');
+            const pTag = topL.querySelector('p');
 
-                if (pTag) {
-                } else {
-                    winner();
-                    topL.style.backgroundColor = "#f8b0b0";
-                    topL.innerHTML = "<p style = 'color:red;'>O</p>"
-                    return;
-                }
+            if (pTag) {
+            } else {
+                winner();
+                topL.style.backgroundColor = "#f8b0b0";
+                topL.innerHTML = "<p style = 'color:red;'>O</p>"
+                return;
+            }
         }
     }
     for (x = 0; x < CV9.length; x++) {
         if (CV9[0].textContent == "X" && CV9[1].textContent == "X") {
-                const pTag = bottomM.querySelector('p');
+            const pTag = bottomM.querySelector('p');
 
-                if (pTag) {
-                } else {
-                    winner();
-                    bottomM.style.backgroundColor = "#f8b0b0";
-                    bottomM.innerHTML = "<p style = 'color:red;'>O</p>"
-                    return;
-                }
+            if (pTag) {
+            } else {
+                winner();
+                bottomM.style.backgroundColor = "#f8b0b0";
+                bottomM.innerHTML = "<p style = 'color:red;'>O</p>"
+                return;
+            }
         }
     }
     for (x = 0; x < CV10.length; x++) {
         if (CV10[0].textContent == "X" && CV10[1].textContent == "X") {
-                const pTag = topM.querySelector('p');
+            const pTag = topM.querySelector('p');
 
-                if (pTag) {
-                } else {
-                    winner();
-                    topM.style.backgroundColor = "#f8b0b0";
-                    topM.innerHTML = "<p style = 'color:red;'>O</p>"
-                    return;
-                }
+            if (pTag) {
+            } else {
+                winner();
+                topM.style.backgroundColor = "#f8b0b0";
+                topM.innerHTML = "<p style = 'color:red;'>O</p>"
+                return;
+            }
         }
     }
     for (x = 0; x < CV11.length; x++) {
         if (CV11[0].textContent == "X" && CV11[1].textContent == "X") {
-                const pTag = bottomR.querySelector('p');
+            const pTag = bottomR.querySelector('p');
 
-                if (pTag) {
-                } else {
-                    winner();
-                    bottomR.style.backgroundColor = "#f8b0b0";
-                    bottomR.innerHTML = "<p style = 'color:red;'>O</p>"
-                    return;
-                }
+            if (pTag) {
+            } else {
+                winner();
+                bottomR.style.backgroundColor = "#f8b0b0";
+                bottomR.innerHTML = "<p style = 'color:red;'>O</p>"
+                return;
+            }
         }
     }
     for (x = 0; x < CV12.length; x++) {
         if (CV12[0].textContent == "X" && CV12[1].textContent == "X") {
-                const pTag = topR.querySelector('p');
+            const pTag = topR.querySelector('p');
 
-                if (pTag) {
-                } else {
-                    winner();
-                    topR.style.backgroundColor = "#f8b0b0";
-                    topR.innerHTML = "<p style = 'color:red;'>O</p>"
-                    return;
-                }
+            if (pTag) {
+            } else {
+                winner();
+                topR.style.backgroundColor = "#f8b0b0";
+                topR.innerHTML = "<p style = 'color:red;'>O</p>"
+                return;
+            }
         }
     }
     for (x = 0; x < CV13.length; x++) {
         if (CV13[0].textContent == "X" && CV13[1].textContent == "X") {
-                const pTag = bottomR.querySelector('p');
+            const pTag = bottomR.querySelector('p');
 
-                if (pTag) {
-                } else {
-                    winner();
-                    bottomR.style.backgroundColor = "#f8b0b0";
-                    bottomR.innerHTML = "<p style = 'color:red;'>O</p>"
-                    return;
-                }
+            if (pTag) {
+            } else {
+                winner();
+                bottomR.style.backgroundColor = "#f8b0b0";
+                bottomR.innerHTML = "<p style = 'color:red;'>O</p>"
+                return;
+            }
         }
     }
     for (x = 0; x < CV14.length; x++) {
         if (CV14[0].textContent == "X" && CV14[1].textContent == "X") {
-                const pTag = topL.querySelector('p');
+            const pTag = topL.querySelector('p');
 
-                if (pTag) {
-                } else {
-                    winner();
-                    topL.style.backgroundColor = "#f8b0b0";
-                    topL.innerHTML = "<p style = 'color:red;'>O</p>"
-                    return;
-                }
+            if (pTag) {
+            } else {
+                winner();
+                topL.style.backgroundColor = "#f8b0b0";
+                topL.innerHTML = "<p style = 'color:red;'>O</p>"
+                return;
+            }
         }
     }
     for (x = 0; x < CV15.length; x++) {
         if (CV15[0].textContent == "X" && CV15[1].textContent == "X") {
-                const pTag = topR.querySelector('p');
+            const pTag = topR.querySelector('p');
 
-                if (pTag) {
-                } else {
-                    winner();
-                    topR.style.backgroundColor = "#f8b0b0";
-                    topR.innerHTML = "<p style = 'color:red;'>O</p>"
-                    return;
-                }
+            if (pTag) {
+            } else {
+                winner();
+                topR.style.backgroundColor = "#f8b0b0";
+                topR.innerHTML = "<p style = 'color:red;'>O</p>"
+                return;
+            }
         }
     }
     for (x = 0; x < CV16.length; x++) {
         if (CV16[0].textContent == "X" && CV16[1].textContent == "X") {
-                const pTag = bottomL.querySelector('p');
+            const pTag = bottomL.querySelector('p');
 
-                if (pTag) {
-                } else {
-                    winner();
-                    bottomL.style.backgroundColor = "#f8b0b0";
-                    bottomL.innerHTML = "<p style = 'color:red;'>O</p>"
-                    return;
-                }
+            if (pTag) {
+            } else {
+                winner();
+                bottomL.style.backgroundColor = "#f8b0b0";
+                bottomL.innerHTML = "<p style = 'color:red;'>O</p>"
+                return;
+            }
         }
     }
     for (x = 0; x < CV17.length; x++) {
         if (CV17[0].textContent == "X" && CV17[1].textContent == "X") {
-                const pTag = middleR.querySelector('p');
+            const pTag = middleR.querySelector('p');
 
-                if (pTag) {
-                } else {
-                    winner();
-                    middleR.style.backgroundColor = "#f8b0b0";
-                    middleR.innerHTML = "<p style = 'color:red;'>O</p>"
-                    return;
-                }
+            if (pTag) {
+            } else {
+                winner();
+                middleR.style.backgroundColor = "#f8b0b0";
+                middleR.innerHTML = "<p style = 'color:red;'>O</p>"
+                return;
+            }
         }
     }
     for (x = 0; x < CV18.length; x++) {
         if (CV18[0].textContent == "X" && CV18[1].textContent == "X") {
-                const pTag = middleM.querySelector('p');
+            const pTag = middleM.querySelector('p');
 
-                if (pTag) {
-                } else {
-                    winner();
-                    middleM.style.backgroundColor = "#f8b0b0";
-                    middleM.innerHTML = "<p style = 'color:red;'>O</p>"
-                    return;
-                }
+            if (pTag) {
+            } else {
+                winner();
+                middleM.style.backgroundColor = "#f8b0b0";
+                middleM.innerHTML = "<p style = 'color:red;'>O</p>"
+                return;
+            }
         }
     }
     for (x = 0; x < CV19.length; x++) {
         if (CV19[0].textContent == "X" && CV19[1].textContent == "X") {
-                const pTag = middleL.querySelector('p');
+            const pTag = middleL.querySelector('p');
 
-                if (pTag) {
-                } else {
-                    winner();
-                    middleL.style.backgroundColor = "#f8b0b0";
-                    middleL.innerHTML = "<p style = 'color:red;'>O</p>"
-                    return;
-                }
+            if (pTag) {
+            } else {
+                winner();
+                middleL.style.backgroundColor = "#f8b0b0";
+                middleL.innerHTML = "<p style = 'color:red;'>O</p>"
+                return;
+            }
         }
     }
     for (x = 0; x < CV20.length; x++) {
         if (CV20[0].textContent == "X" && CV20[1].textContent == "X") {
-                const pTag = topM.querySelector('p');
+            const pTag = topM.querySelector('p');
 
-                if (pTag) {
-                } else {
-                    winner();
-                    topM.style.backgroundColor = "#f8b0b0";
-                    topM.innerHTML = "<p style = 'color:red;'>O</p>"
-                    return;
-                }
+            if (pTag) {
+            } else {
+                winner();
+                topM.style.backgroundColor = "#f8b0b0";
+                topM.innerHTML = "<p style = 'color:red;'>O</p>"
+                return;
+            }
         }
     }
     for (x = 0; x < CV21.length; x++) {
         if (CV21[0].textContent == "X" && CV21[1].textContent == "X") {
-                const pTag = middleM.querySelector('p');
+            const pTag = middleM.querySelector('p');
 
-                if (pTag) {
-                } else {
-                    winner();
-                    middleM.style.backgroundColor = "#f8b0b0";
-                    middleM.innerHTML = "<p style = 'color:red;'>O</p>"
-                    return;
-                }
+            if (pTag) {
+            } else {
+                winner();
+                middleM.style.backgroundColor = "#f8b0b0";
+                middleM.innerHTML = "<p style = 'color:red;'>O</p>"
+                return;
+            }
         }
     }
     for (x = 0; x < CV22.length; x++) {
         if (CV22[0].textContent == "X" && CV22[1].textContent == "X") {
-                const pTag = bottomM.querySelector('p');
+            const pTag = bottomM.querySelector('p');
 
-                if (pTag) {
-                } else {
-                    winner();
-                    bottomM.style.backgroundColor = "#f8b0b0";
-                    bottomM.innerHTML = "<p style = 'color:red;'>O</p>"
-                    return;
-                }
+            if (pTag) {
+            } else {
+                winner();
+                bottomM.style.backgroundColor = "#f8b0b0";
+                bottomM.innerHTML = "<p style = 'color:red;'>O</p>"
+                return;
+            }
         }
     }
     for (x = 0; x < CV23.length; x++) {
         if (CV23[0].textContent == "X" && CV23[1].textContent == "X") {
-                const pTag = middleM.querySelector('p');
+            const pTag = middleM.querySelector('p');
 
-                if (pTag) {
-                } else {
-                    winner();
-                    middleM.style.backgroundColor = "#f8b0b0";
-                    middleM.innerHTML = "<p style = 'color:red;'>O</p>"
-                    return;
-                }
+            if (pTag) {
+            } else {
+                winner();
+                middleM.style.backgroundColor = "#f8b0b0";
+                middleM.innerHTML = "<p style = 'color:red;'>O</p>"
+                return;
+            }
         }
     }
     for (x = 0; x < CV24.length; x++) {
         if (CV24[0].textContent == "X" && CV24[1].textContent == "X") {
-                const pTag = middleM.querySelector('p');
+            const pTag = middleM.querySelector('p');
 
-                if (pTag) {
-                } else {
-                    winner();
-                    middleM.style.backgroundColor = "#f8b0b0";
-                    middleM.innerHTML = "<p style = 'color:red;'>O</p>"
-                    return;
-                }
+            if (pTag) {
+            } else {
+                winner();
+                middleM.style.backgroundColor = "#f8b0b0";
+                middleM.innerHTML = "<p style = 'color:red;'>O</p>"
+                return;
+            }
         }
     }
 
