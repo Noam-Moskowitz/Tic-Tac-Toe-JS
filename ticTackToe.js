@@ -59,6 +59,9 @@ document.addEventListener("click", function (e) {
             element.innerHTML = "<p style = 'color:blue;'>X</p>";
             winner();
             a++;
+            if (a >= 5) {
+                document.getElementById('draw').style.display = 'block';
+            }
            
             for (x = 0; x < board.length; x++) {
                 let loopelementID = board[x].id;
@@ -73,9 +76,7 @@ document.addEventListener("click", function (e) {
                 } else {
 
                 }
-                 if (a >= 5) {
-                document.getElementById('draw').style.display = 'block';
-            }
+                 
 
             }
         }
