@@ -1,3 +1,4 @@
+/* Variables for the board (pointers)*/
 const topL = document.getElementById('topL')
 const topM = document.getElementById('topM')
 const topR = document.getElementById('topR')
@@ -8,8 +9,10 @@ const bottomL = document.getElementById('bottomL')
 const bottomM = document.getElementById('bottomM')
 const bottomR = document.getElementById('bottomR')
 
+/* Array made of pointers */
 const board = [topM, middleL, bottomR, middleR, topR, bottomL, middleM, bottomM, topL];
 
+/* Variables for victory function */
 const V1 = [topL, topM, topR];
 const V2 = [middleL, middleM, middleR];
 const V3 = [bottomL, bottomM, bottomR];
@@ -19,6 +22,7 @@ const V6 = [topR, middleR, bottomR];
 const V7 = [topR, middleM, bottomL];
 const V8 = [topL, middleM, bottomR];
 
+/* Variables for competition function */
 const CV1 = [topL, topM]
 const CV2 = [topR, topM]
 const CV3 = [middleR, middleM]
@@ -44,13 +48,15 @@ const CV22 = [bottomR, bottomL]
 const CV23 = [topL, bottomR]
 const CV24 = [topR, bottomL]
 
-const Draw = [topL, topM, topR, middleL, middleM, middleR, bottomL, bottomM, bottomR]
+/* Variable for draw if statement */
 let a = 0;
 
+/* Target what was clicked */
 document.addEventListener("click", function (e) {
     let elementID = e.target.id;
     let element = document.getElementById(elementID);
 
+    /* check if clicked element is on the board */
     for (x = 0; x < board.length; x++) {
         let boardCheck = board[x].id;
 
@@ -58,30 +64,30 @@ document.addEventListener("click", function (e) {
             element.style.backgroundColor = "lightblue";
             element.innerHTML = "<p style = 'color:blue;'>X</p>";
             winner();
+            /* Draw if statement */
             a++;
             if (a >= 5) {
                 document.getElementById('draw').style.display = 'block';
             }
-           
+
+            /* check for empty space on board */
             for (x = 0; x < board.length; x++) {
                 let loopelementID = board[x].id;
                 let loopelement = document.getElementById(loopelementID);
                 const pTag = loopelement.querySelector('p');
-                
+
                 if (!pTag) {
-                    /*   winner(); */
                     Competition();
                     winner();
                     return;
                 } else {
-
                 }
-                 
-
             }
         }
     }
 });
+
+/* Refresh page when clicking on restart */
 document.getElementById('Restart1').addEventListener("click", function () {
     document.location.reload();
 });
@@ -92,6 +98,7 @@ document.getElementById('Restart3').addEventListener("click", function () {
     document.location.reload();
 });
 
+/* Checks if there is a victory or defeat */
 function winner() {
     for (x = 0; x < V1.length; x++) {
         if (V1[0].textContent == "X" && V1[1].textContent == "X" && V1[2].textContent == "X") {
@@ -168,6 +175,8 @@ function winner() {
         }
     }
 }
+
+/* Responds based off of players move */
 function Competition() {
     for (x = 0; x < CV1.length; x++) {
         if (CV1[0].textContent == "X" && CV1[1].textContent == "X") {
