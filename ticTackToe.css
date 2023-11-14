@@ -1,34 +1,31 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    background-image: url(playground3.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+  background-image: url(playground3.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
-
 .container {
-    margin: 100px auto;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 22vh);
-    width: 50vw;
-    border: 5px solid rgb(84, 150, 150)
+  margin: 100px auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 22vh);
+  width: 50vw;
+  border: 5px solid rgb(84, 150, 150);
 }
 
 .div {
-    font-size: 7.7rem;
-    text-align: center;
-    height: 100%;
-    width: 100%;
-    font-family: 'Permanent Marker';
-
-
+  font-size: 7.7rem;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  font-family: "Permanent Marker";
 }
 
 #topL,
@@ -40,179 +37,175 @@ body {
 #bottomL,
 #bottomM,
 #bottomR {
-    background-color: rgba(218, 218, 218, 0.589);
+  background-color: rgba(218, 218, 218, 0.589);
 }
 
 #topL {
-    border-right: 3px solid #000;
-    border-bottom: 3px solid #000;
+  border-right: 3px solid #000;
+  border-bottom: 3px solid #000;
 }
 
 #topM {
-    border-left: 3px solid #000;
-    border-bottom: 3px solid #000;
-    border-right: 3px solid #000;
+  border-left: 3px solid #000;
+  border-bottom: 3px solid #000;
+  border-right: 3px solid #000;
 }
 
 #topR {
-    border-left: 3px solid #000;
-    border-bottom: 3px solid #000;
+  border-left: 3px solid #000;
+  border-bottom: 3px solid #000;
 }
 
 #middleL {
-    border-right: 3px solid #000;
-    border-top: 3px solid #000;
-    border-bottom: 3px solid #000;
+  border-right: 3px solid #000;
+  border-top: 3px solid #000;
+  border-bottom: 3px solid #000;
 }
 
 #middleM {
-    border: 3px solid #000;
+  border: 3px solid #000;
 }
 
 #middleR {
-    border-top: 3px solid #000;
-    border-left: 3px solid #000;
-    border-bottom: 3px solid #000;
+  border-top: 3px solid #000;
+  border-left: 3px solid #000;
+  border-bottom: 3px solid #000;
 }
 
 #bottomL {
-    border-top: 3px solid #000;
-    border-right: 3px solid #000;
+  border-top: 3px solid #000;
+  border-right: 3px solid #000;
 }
 
 #bottomM {
-    border-right: 3px solid #000;
-    border-top: 3px solid #000;
-    border-left: 3px solid #000;
+  border-right: 3px solid #000;
+  border-top: 3px solid #000;
+  border-left: 3px solid #000;
 }
 
 #bottomR {
-    border-top: 3px solid #000;
-    border-left: 3px solid #000;
+  border-top: 3px solid #000;
+  border-left: 3px solid #000;
 }
 
 #Defeat,
 #draw,
 #Victory {
-    width: 100vw;
-    height: 30vh;
-    position: absolute;
-    top: 30vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    display: none;
+  width: 100vw;
+  height: 30vh;
+  position: absolute;
+  top: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
 }
 
 #draw {
-    background-color: rgba(253, 253, 180, 0.7);
+  background-color: rgba(253, 253, 180, 0.7);
 }
 
 #Defeat {
-    background-color: rgba(253, 166, 144, 0.7);
+  background-color: rgba(253, 166, 144, 0.7);
 }
 
 #Victory {
-    background-color: rgba(155, 215, 255, 0.7);
+  background-color: rgba(155, 215, 255, 0.7);
 }
 
 #Defeat-content,
 #draw-content,
 #Victory-content {
-    display: flex;
-    justify-content: space-evenly;
-    flex-direction: column;
-    height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  height: 100%;
 }
 
 h3 {
-    font-size: 7rem;
-    padding-bottom: 20px;
-    text-align: center;
-    font-family: 'Caveat';
+  font-size: 7rem;
+  padding-bottom: 20px;
+  text-align: center;
+  font-family: "Caveat";
 }
 
 .Def {
-    color: red;
+  color: red;
 }
 
 .Vic {
-    color: blue;
+  color: blue;
 }
 
 .draw {
-    color: rgb(255, 255, 4);
+  color: rgb(255, 255, 4);
 }
 
 .button-container {
-    margin: 0 auto;
+  margin: 0 auto;
 }
 
 #Restart1,
 #Restart2,
 #Restart3 {
-    font-size: 1.2rem;
-    border: none;
-    padding: 8px;
-    border-radius: 10px;
+  font-size: 1.2rem;
+  border: none;
+  padding: 8px;
+  border-radius: 10px;
 }
 
 #Restart1 {
-    color: black;
-    background-color: lightcoral;
-    border: 1px solid black;
+  color: black;
+  background-color: lightcoral;
+  border: 1px solid black;
 }
 
 #Restart1:hover {
-    background-color: red;
+  background-color: red;
 }
 
 #Restart2 {
-    color: black;
-    background-color: lightgoldenrodyellow;
-    border: 1px solid black;
+  color: black;
+  background-color: lightgoldenrodyellow;
+  border: 1px solid black;
 }
 
 #Restart2:hover {
-    background-color: yellow;
+  background-color: yellow;
 }
 
 #Restart3 {
-    color: black;
-    background-color: lightblue;
-    border: 1px solid black;
+  color: black;
+  background-color: lightblue;
+  border: 1px solid black;
 }
 
 #Restart3:hover {
-    background-color: rgb(78, 78, 245);
+  background-color: rgb(78, 78, 245);
 }
 
+@media (max-width: 800px) {
+  .container {
+    width: 95vw;
+    margin: 100px auto;
+  }
 
-
-@media (max-width:800px) {
-    .container {
-        width: 95vw;
-        margin: 100px auto;
-    }
-
-
-    #Restart1,
-    #Restart2,
-    #Restart3 {
-        font-size: 1rem;
-    }
+  #Restart1,
+  #Restart2,
+  #Restart3 {
+    font-size: 1rem;
+  }
 }
 
-@media (max-width:600px) {
+@media (max-width: 600px) {
+  h3 {
+    font-size: 3rem;
+  }
 
-    h3 {
-        font-size: 3rem;
-    }
-
-    #Defeat,
-    #draw,
-    #Victory {
-        height: 22vh;
-        top: 35vh;
-    }
+  #Defeat,
+  #draw,
+  #Victory {
+    height: 22vh;
+    top: 35vh;
+  }
 }
